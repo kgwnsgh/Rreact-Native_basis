@@ -7,14 +7,17 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 
+// Press 이벤트 종류와 사용법
+
 const Header = props => {
   return (
     <TouchableOpacity
       style={styles.header}
       onPress={() => alert('hello world!!')}
-      onLongPress={() => alert('LongPress This')}
-      onPressIn={() => alert('onpressIn !')}
-      onPressOut={() => alert('onPressOut !')}>
+      onLongPress={() => alert('LongPress This')} // 길게누를때
+      onPressIn={() => alert('onpressIn !')} // 누르기 시작할때
+      onPressOut={() => alert('onPressOut !')} // 누르고 버튼 놓을때
+    >
       <View>
         <Text>{props.name}</Text>
       </View>

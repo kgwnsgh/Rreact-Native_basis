@@ -97,11 +97,17 @@ import {
   ScrollView,
   Button,
   TextInput,
+  Image,
 } from 'react-native';
 import Header from './src/Header';
 import Generator from './src/Generator';
 import NumList from './src/NumList';
 import Input from './src/input';
+import Picker from './src/picker';
+import Rainbow from './assets/images/rw.jpg';
+import UseImage from './src/image';
+import UseStyle from './src/styleSheet';
+import Modal from './src/modal';
 
 class App extends Component {
   state = {
@@ -147,34 +153,23 @@ class App extends Component {
   render() {
     return (
       <View style={styles.mainView}>
-        {/* <View>
-          <View style={styles.subView}>
-            <Text style={styles.mainText}>Hello wordl!!</Text>
-          </View>
-            <Header name={this.state.appName} />
-          <Text
-            style={styles.mainText}
-            onPress={() => alert('text touch event')}
-           >Hi</Text>
-           </View> 
+        {/* <UseStyle /> */}
+        {/* <Header name={this.state.appName} /> */}
+        {/* <Picker />  */}
+        {/* <UseImage /> */}
 
-           <Generator add={this.onAddRandomNum} />
-
-          <ScrollView
-            style={{width: '100%'}}
-            // onMomentumScrollBegin={()=>alert('begin')} //스크롤을 놓았을때
-            // onMomentumScrollEnd={()=>alert('end')} // 스크롤이 멈췄을때
-            // onScroll={()=>alert('onScroll')} //스크롤이 조금이라도 움직이면
-            // onContentSizeChange={(width, height)=> alert(height)} // 사이즈가 바뀔때 나타나는 창
-            // bounces={false} //동적이게 튕기는 느낌이 나는것을 조절함
-          >
-            <NumList 
-              num={this.state.random} 
-              delete={this.onNumDelete}
-            />
-          </ScrollView> */}
-
-        <TextInput
+        {/* <Generator add={this.onAddRandomNum} />
+        <ScrollView
+          style={{width: '100%'}}
+          // onMomentumScrollBegin={()=>alert('begin')} //스크롤을 놓았을때
+          // onMomentumScrollEnd={()=>alert('end')} // 스크롤이 멈췄을때
+          // onScroll={()=>alert('onScroll')} //스크롤이 조금이라도 움직이면
+          // onContentSizeChange={(width, height)=> alert(height)} // 사이즈가 바뀔때 나타나는 창
+          // bounces={false} //동적이게 튕기는 느낌이 나는것을 조절함
+        >
+          <NumList num={this.state.random} delete={this.onNumDelete} />
+        </ScrollView> */}
+        {/* <TextInput
           value={this.state.myTextInput}
           style={styles.input}
           onChangeText={this.onChangeInput} // 텍스트 입력을 위해 필요
@@ -190,7 +185,9 @@ class App extends Component {
               {item}
             </Text>
           ))}
-        </ScrollView>
+        </ScrollView> */}
+
+        <Modal />
       </View>
     );
   }
